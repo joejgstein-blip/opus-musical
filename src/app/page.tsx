@@ -4,6 +4,7 @@ import Synopsis from "@/components/Synopsis";
 import TableOfContents from "@/components/TableOfContents";
 import SceneBlock from "@/components/SceneBlock";
 import SongBlock from "@/components/SongBlock";
+import SideNav from "@/components/SideNav";
 import type { SceneSection, SongSection } from "@/data/show";
 
 type Group =
@@ -84,6 +85,7 @@ export default function Home() {
 
   return (
     <div className="page-wrapper">
+      <SideNav />
       <main className="main-content">
         <Hero />
         <Synopsis />

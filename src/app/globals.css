@@ -767,6 +767,134 @@ em {
   padding: 0.5rem 0;
 }
 
+/* ── Side Navigation ── */
+
+.side-nav {
+  position: fixed;
+  right: 1.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 82vh;
+  overflow-y: auto;
+  z-index: 50;
+  width: 158px;
+  scrollbar-width: none;
+}
+
+.side-nav::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .side-nav { display: none; }
+}
+
+.side-nav-group {
+  margin-bottom: 1.75rem;
+}
+
+.side-nav-heading {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.side-nav-album-link {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-bottom: 0.65rem;
+  transition: color 0.2s;
+}
+
+.side-nav-album-link:hover {
+  color: var(--gold);
+}
+
+.side-nav-track {
+  position: relative;
+  padding-left: 14px;
+}
+
+.side-nav-track::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  bottom: 7px;
+  width: 1px;
+  background: var(--border);
+}
+
+.side-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 3px 0;
+  text-align: left;
+}
+
+.side-nav-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--text-dim);
+  background: var(--bg);
+  flex-shrink: 0;
+  margin-left: -14px;
+  transition: all 0.2s ease;
+}
+
+.side-nav-item.active .side-nav-dot {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 5px rgba(200, 169, 110, 0.45);
+}
+
+.side-nav-item:hover .side-nav-dot {
+  border-color: var(--gold-dim);
+}
+
+.side-nav-item-label {
+  font-family: "Lato", sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 132px;
+  transition: color 0.2s;
+}
+
+.side-nav-item.active .side-nav-item-label {
+  color: var(--gold);
+}
+
+.side-nav-item:hover .side-nav-item-label {
+  color: var(--text-muted);
+}
+
+.side-nav-num {
+  color: var(--gold-dim);
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
+  margin-right: 1px;
+}
+
 /* ── Footer ── */
 
 .site-footer {
