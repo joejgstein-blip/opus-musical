@@ -363,6 +363,16 @@ em {
   padding-bottom: 2rem;
 }
 
+.scene-song-hint {
+  font-family: "Lato", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-dim);
+  margin-left: 0.25rem;
+  font-style: italic;
+  flex-shrink: 0;
+}
+
 .scene-song-cue {
   font-family: "Lato", sans-serif;
   font-size: 0.65rem;
@@ -370,6 +380,45 @@ em {
   text-transform: uppercase;
   color: var(--gold-dim);
   margin: 1.25rem 0;
+}
+
+/* ── Embedded Song (inside a scene block) ── */
+
+.embedded-song {
+  background: var(--bg-song);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem 0.25rem;
+  margin: 2rem 0 0.5rem;
+  position: relative;
+}
+
+.embedded-song::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+.embedded-song-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.embedded-song-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  display: block;
+  margin-top: 0.4rem;
 }
 
 /* ── Song Block ── */
