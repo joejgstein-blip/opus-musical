@@ -1,26 +1,739 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0e0d0b;
+  --bg-raised: #161410;
+  --bg-song: #131210;
+  --text: #f0ebe0;
+  --text-muted: #8a7e68;
+  --text-dim: #4a4438;
+  --gold: #c8a96e;
+  --gold-dim: #7a6440;
+  --gold-faint: rgba(200, 169, 110, 0.08);
+  --border: rgba(200, 169, 110, 0.15);
+  --border-strong: rgba(200, 169, 110, 0.35);
+  --radius: 2px;
+  --max-w: 720px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin-bottom: 1.1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+em {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem 8rem;
+}
+
+/* ── Hero ── */
+
+.hero {
+  text-align: center;
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4rem;
+}
+
+.hero-eyebrow {
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(5rem, 14vw, 9rem);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.hero-rule {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2rem auto;
+  opacity: 0.5;
+}
+
+/* ── Synopsis ── */
+
+.synopsis {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.synopsis-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* ── Table of Contents ── */
+
+.toc {
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc-acts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 600px) {
+  .toc-acts {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.toc-act-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc-list {
+  list-style: none;
+}
+
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(200, 169, 110, 0.06);
+}
+
+.toc-item:last-child {
+  border-bottom: none;
+}
+
+.toc-number {
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.08em;
+  min-width: 1.5rem;
+  flex-shrink: 0;
+}
+
+.toc-link {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.toc-link:hover {
+  color: var(--gold);
+}
+
+.toc-song-badge {
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  color: var(--gold-dim);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ── Act Header ── */
+
+.act-header {
+  text-align: center;
+  margin: 4rem 0 3rem;
+  position: relative;
+}
+
+.act-header::before,
+.act-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 5rem);
+  height: 1px;
+}
+
+.act-header::before {
+  left: 0;
+  background: linear-gradient(to right, transparent, var(--gold-dim));
+}
+
+.act-header::after {
+  right: 0;
+  background: linear-gradient(to left, transparent, var(--gold-dim));
+}
+
+.act-number {
+  font-family: "Lato", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.act-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.act-note {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 1.5rem auto 0;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ── Scene Block ── */
+
+.section-wrapper {
+  margin-bottom: 1rem;
+}
+
+.scene-block {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.scene-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.scene-number {
+  font-family: "Lato", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  flex-shrink: 0;
+}
+
+.scene-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.scene-body {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ── Song Block ── */
+
+.song-block {
+  background: var(--bg-song);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem 2rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.song-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+
+.song-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.song-eyebrow {
+  font-family: "Lato", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.song-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.song-wip-badge {
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--text-dim);
+  padding: 0.1rem 0.5rem;
+  border-radius: 1px;
+  margin-top: 0.75rem;
+}
+
+.soundcloud-embed {
+  margin: 1.5rem 0 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.soundcloud-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.soundcloud-placeholder {
+  background: var(--bg-raised);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 0 0;
+  color: var(--text-dim);
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lyrics-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: opacity 0.2s;
+}
+
+.lyrics-toggle:hover {
+  opacity: 0.7;
+}
+
+.lyrics-toggle-icon {
+  font-size: 0.5rem;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.lyrics-toggle-icon.open {
+  transform: rotate(90deg);
+}
+
+.lyrics-panel {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.lyrics-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+  font-style: normal;
+}
+
+.lyric-label {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin: 1.5rem 0 0.5rem;
+  font-style: normal;
+}
+
+.lyric-direction {
+  font-style: italic;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+/* ── Reaction Bar ── */
+
+.reaction-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(200, 169, 110, 0.08);
+}
+
+.reaction-label {
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-right: 0.5rem;
+}
+
+.reaction-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.reaction-btn:hover {
+  border-color: var(--gold-dim);
+  color: var(--text);
+}
+
+.reaction-btn.active-up {
+  border-color: var(--gold);
+  background: var(--gold-faint);
+}
+
+.reaction-btn.active-down {
+  border-color: #8a5a5a;
+  background: rgba(138, 90, 90, 0.08);
+}
+
+.comment-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+.comment-toggle:hover {
+  color: var(--gold);
+}
+
+/* ── Comment Box ── */
+
+.comment-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.comment-textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  resize: none;
+  padding: 0.5rem 0;
+  outline: none;
+  min-height: 60px;
+  transition: border-color 0.2s;
+}
+
+.comment-textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.comment-textarea:focus {
+  border-color: var(--gold-dim);
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.comment-hint {
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.comment-submit {
+  background: none;
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--radius);
+  color: var(--gold);
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.comment-submit:hover {
+  background: var(--gold-faint);
+  border-color: var(--gold);
+}
+
+.comment-submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.comment-success {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--gold);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* ── Footer ── */
+
+.site-footer {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+.site-footer-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+/* ── Backstage ── */
+
+.backstage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.backstage-header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.backstage-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.backstage-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.backstage-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.backstage-section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.backstage-reactions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.backstage-reaction-count {
+  font-family: "Lato", sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.backstage-comments {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.backstage-comment {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(200, 169, 110, 0.06);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.backstage-comment:last-child {
+  border-bottom: none;
+}
+
+.backstage-comment-meta {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.backstage-empty {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ── Animations ── */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease forwards;
 }
