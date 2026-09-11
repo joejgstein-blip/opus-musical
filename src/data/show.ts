@@ -46,11 +46,7 @@ export const show = {
       type: "scene",
       act: 1,
       title: "Prologue",
-      body: `Opening Monologue
-
-Historical Scenes PROLOGUE
-
-Ending shot of Jon being given news by a doctor, sitting there in shock as the scene cuts to black.`,
+      body: `The show opens with a narration from John's future son, talking about the special moments in life and how quickly they all seem to slip away. As the opening narration ends, a steady piano instrumental begins (Prologue). We start with John after having graduated college, with visuals of him navigating the everyday monotony of life. A new musical element is introduced as John meets his future wife, Sophie, for the first time, and we continue to see the development of their relationship as the music builds. Additional musical elements are introduced as we see John and Sophie interacting with their friends and eventually getting married. Their life continues to unfold, with children being born and them experiencing special moments with their family. The music becomes softer and slower as one day we cut to a visual of John in a doctors office, discussing somber news. The final dissonant notes fade away with John shown alone, head in his hands.`,
     } satisfies SceneSection,
 
     {
