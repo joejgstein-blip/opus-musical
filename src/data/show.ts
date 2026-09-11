@@ -46,7 +46,11 @@ export const show = {
       type: "scene",
       act: 1,
       title: "Prologue",
-      body: `Historical scenes unspool in sequence — snapshots of a life fully lived. The stage clears. In the final image, Jon sits across from a doctor. The doctor speaks. Jon absorbs the words, face unreadable, as the scene cuts to black.`,
+      body: `Opening Monologue
+
+Historical Scenes PROLOGUE
+
+Ending shot of Jon being given news by a doctor, sitting there in shock as the scene cuts to black.`,
     } satisfies SceneSection,
 
     {
@@ -64,9 +68,19 @@ export const show = {
       type: "scene",
       act: 1,
       title: "Jon Comes Home",
-      body: `Jon steps out of the office, phone to his ear, telling Sophie what the doctor said — or a version of it. The weight of it settles over him as he walks. What does this mean? How much time? What does he say, and to whom?
+      body: `Scene begins with Jon on the phone with Sophie (split stage?) - conveying the news (to decide - what level of specificity). He is on his way home - as he leaves the office, he ponders what this means for him.
 
-He arrives home. Sophie wraps her arms around him. The kids barrel in, wanting him to play a game of tag. He agrees. They chase each other through the house as he sings.`,
+HOLD THE LINE (First Verse and Chorus)
+
+After the chorus, he arrives home and greets Sophie and his two children at home. Sophie hugs him, and his two kids want him to play a game with them. He agrees and sings as they play a game of tag in the house.
+
+HOLD THE LINE (2nd Verse)
+
+Music lulls as they finish the game. The kids need to get ready to go to practice - he says goodbye to them and is once again alone in the house.
+
+HOLD THE LINE (Bridge and Final Chorus)
+
+End Scene as the music ends.`,
     } satisfies SceneSection,
 
     {
@@ -187,9 +201,13 @@ And I will survive.`,
       type: "scene",
       act: 1,
       title: "Evening and Bedtime",
-      body: `Some days later. Jon helps the kids with homework at the dinner table when a wave of pain bends him forward. The kids look frightened. He tells them to go get ready for bed — he's okay. He and Sophie exchange a look. He'll be fine. He'll read them a story.
+      body: `Some days later, we return to the household in the evening. Jon is helping the kids with their homework at the dinner table, when he bends over in pain. The kids are frightened, but Jon tells them to get ready for bed. He has a brief conversation with Sophie that it has been a tough day, but he's okay and he will read them a bed-time story.
 
-In their room, the kids ask in quiet voices: *Is Dad okay?* He reassures them. Tonight he's going to tell them a story about *them* — two kids who grow up to be superheroes.`,
+We re-join the kids in their bedroom, with them quietly asking if Dad is okay. He re-assures them, and he decides he's going to tell them a story about them - two kids who grow up to be superheroes.
+
+FLY
+
+As the song progresses, the kids are excited during verse 2 and out of bed. Before the outro, Jon corals them to get into bed, and the song ends with them tucked in. Jon whispers good night as the song fades out, with Sophie looking on in the doorway. Scene fades out.`,
     } satisfies SceneSection,
 
     {
@@ -297,7 +315,11 @@ And always in your heart know you have someone who loves you.`,
       type: "scene",
       act: 1,
       title: "Last Day at Work",
-      body: `Jon runs a team meeting, then returns to his desk and grimaces. A coworker asks how he's doing. Jon keeps an upbeat face, but beneath it something shifts — he wants to cross something off his bucket list. He's never learned to play an instrument. He decides he'll learn piano. His coworkers join in, listing all the things *they'd* do if they had the time.`,
+      body: `We start with Jon in the office, leading a team meeting and then returning to his desk and grimacing. While there, Jon and one of his coworkers discuss his condition and how he is doing overall. Jon keeps an upbeat attitude, but realizes that he would like to cross something off of his bucket list as a way to keep fighting. He decides that he's never learned to play an instrument, and decides that he will learn to play the piano. He, along with his coworkers, sing about getting out of the office and hitting their own bucket list items.
+
+BUCKET LIST
+
+The scene ends with Jon packing up his bag and heading home.`,
     } satisfies SceneSection,
 
     {
@@ -429,7 +451,11 @@ I'd finally play that song for you.`,
       type: "scene",
       act: 1,
       title: "Piano Lessons",
-      body: `After a quick conversation with Sophie, Jon heads out for his first lesson. He introduces himself to his teacher and admits he's nervous about learning as an adult. The teacher waves it off — it's never too late. You just take it one step at a time.`,
+      body: `After a brief discussion with Sophie, he heads out for his lesson, cutting to the music lesson. He introduces himself to his teacher, where he expresses nerves about learning as an adult. The teacher assures him that it's never too late to learn, and that you just take it one step at a time.
+
+ABC
+
+The song pulls in additional contributions from other students at the school, ending on an upbeat note. The lesson continues as the scene cuts.`,
     } satisfies SceneSection,
 
     {
@@ -530,9 +556,19 @@ Oh how that music makes us feel alive.`,
       type: "scene",
       act: 1,
       title: "Date Night",
-      body: `We catch Jon practicing at the piano, a kid playing alongside him. Sophie walks in as the kid drifts off to do homework. They talk — how's it going? Things have been hard. They need to do something fun. Jon decides to plan a proper night out: dinner and a walk through New York City.
+      body: `We see Jon practicing at the piano a bit, playing along with one of the kids. Sophie walks in as the kid goes off to do homework, and they talk about how it's been going. After Jon needs to take a moment when they are "dancing", they discuss the need to do something fun and get out of the house. Jon decides to plan a date for the two of them, heading into New York City for an evening.
 
-The stage shifts. They stroll past old favorite spots. She threads her arm through his. They start remembering — those early nights in the city, before everything was anything.`,
+Transition
+
+We see them walking around downtown - passing by some of their favorite spots. They begin reminiscing about some of their first nights.
+
+IN THE CITY (Verse 1, Chorus, Verse 2)
+
+Jon needs to take another moment, and after a brief moment of sadness, Jon continues the song.
+
+IN THE CITY (Bridge, Final Chorus).
+
+The scene ends with them together, laughing.`,
     } satisfies SceneSection,
 
     {
@@ -645,7 +681,11 @@ Tell the timeless tale of us.`,
       type: "scene",
       act: 1,
       title: "Birthday Party",
-      body: `Jon's birthday. Family and friends fill the house. Jon is visibly doing worse — moving more carefully, tiring more easily — but the energy in the room is warm and full. He works the room, checking in with everyone. When the cake comes out, he blows out the candles and stands to give a speech. The room goes quiet.`,
+      body: `We are nearing Jon's birthday, and a bunch of his family and friends have come over the celebrate. Jon is doing visibly worse at this point, but it's a festive atmosphere and we see him talking to a few people about his progress and how he's doing. After the birthday cake comes out, Jon blows out the candles and gives a speech - expressing his gratitude for his family and friends.
+
+LUCKIEST MAN
+
+The scene ends with Jon singing the final line, sitting back down at the table with Sophie and his two kids.`,
     } satisfies SceneSection,
 
     {
@@ -727,7 +767,11 @@ On the face, of the earth.`,
       type: "scene",
       act: 1,
       title: "Morning Rush",
-      body: `The morning after the party. The house is a cheerful chaos — breakfast, backpacks, leftover dishes. Jon and the kids pour out the door. Sophie waves them off, then turns back to the kitchen. She starts cleaning up. She reaches Jon's place at the table. She stops.`,
+      body: `It's morning after the party, and the family is getting ready for the day - Jon off to work and the kids off to school. We see a hectic morning taking place, rushing to get through breakfast, and then Jon and the kids rush out the door, with some dishes left at the table - still some leftover clean-up from the party too. Sophie sees them out, and then starts cleaning up. As she reaches Jon's place setting, she falters a bit.
+
+LIE
+
+The scene ends with Sophie, sitting back down at Jon's place setting.`,
     } satisfies SceneSection,
 
     {
@@ -843,7 +887,11 @@ Don't leave me here all alone.`,
       type: "scene",
       act: 1,
       title: "A Night Down Memory Lane",
-      body: `A few nights later. Jon and Sophie are getting ready — some of Jon's old college friends are in town, coming over for the evening. Sophie exits with the kids and the friends arrive, drinks in hand, full of updates. They settle in and start talking — jobs, moves, changes, the usual chaos of lives in motion.`,
+      body: `A few days later, Jon and Sophie are discussing the evening, where some of Jon's old college friends are in-town and coming over to visit. Sophie exits with the kids, and we see the friends enter. After some brief conversation, they all crack open a few drinks and start talking about their updates over the past few years.
+
+WINDING ROAD
+
+As the song ends, the friends share a few more good-byes and then exit, leaving Jon by himself. He walks over the piano and starts practicing, playing twinkle, twinkle little star before transitioning into a new song, but he can't seem to find the melody.`,
     } satisfies SceneSection,
 
     {
@@ -931,7 +979,9 @@ To this winding road we're on!`,
       type: "scene",
       act: 1,
       title: "Practice & Practice & Symptoms",
-      body: `Time passes. The days run together — Jon at the piano, Jon playing with the kids, Jon and Sophie in the kitchen. In between: calls from doctors, small but unmistakable signs that things are getting worse. The family moves forward, but the edges are starting to fray. Jon leaves after dinner for another lesson.`,
+      body: `Conveying the passing of time, we see the family going through the typical days - Jon is practicing, playing with the kids, working with Sophie. Interspersed are calls from the doctor, subtle but increasing signs of the symptoms getting worse.
+
+The scene ends with Jon leaving after dinner to go to another lesson.`,
     } satisfies SceneSection,
 
     {
@@ -939,9 +989,13 @@ To this winding road we're on!`,
       type: "scene",
       act: 1,
       title: "A Bad Lesson",
-      body: `During the lesson, Jon admits he's frustrated — he hasn't been making progress fast enough, and the song he's trying to write keeps slipping away from him. Mid-conversation, he gets suddenly ill and has to leave the room. Worried, the teacher calls Sophie.
+      body: `During a lesson with his teacher, Jon is expressing frustration that he hasn't been able to make progress as fast as he'd like, and he's struggling to write a song that he feels good about to perform. During that conversation, he gets ill and needs to run out of the room. Worried, his teacher calls Sophie.
 
-When Sophie arrives, Jon is at his lowest point — the rose-colored glasses, cracked at last. He doesn't know how he can keep going. Sophie reminds him he doesn't have to fight alone. He can let other people carry some of it sometimes.`,
+In his low point, Jon expresses how he doesn't know how he can do it, and keep going. It's the breaking of the rose colored glasses that he has been wearing this whole time. reassures him how he doesn't have to fight by himself - he can let other people fight for him sometimes.
+
+LOW POINT TBD (??)
+
+Jon and Sophie end the song hugging - they thank the teacher for the help and exit as the scene ends.`,
     } satisfies SceneSection,
 
     {
@@ -1039,7 +1093,11 @@ How do I keep going from here.`,
       type: "scene",
       act: 1,
       title: "A Bad Lesson, Continued",
-      body: `Later that night. Jon and Sophie come home. He says good night to the kids and settles back at the piano. He taps a few notes. Taps a few more. Something shifts. A new melody starts to take shape — tentative at first, then gathering. He hums along with it.`,
+      body: `Jon and Sophie walk in, and after saying good night to his kids, Jon sits back down at the piano. He taps a few notes, and then seems to have a breakthrough as he starts playing a humming a new melody.
+
+SHINE (Prelude)
+
+The scene ends with Jon realizing that he's happy with it, grabbing his pen and paper and excitedly writing notes down as he exits.`,
     } satisfies SceneSection,
 
     {
@@ -1057,7 +1115,11 @@ How do I keep going from here.`,
       type: "scene",
       act: 1,
       title: "The Performance",
-      body: `The day of the show. Sophie squeezes his hand. His teacher gives him a word of encouragement. Jon walks onstage and sits down at the piano. The room goes still. He places his hands on the keys, takes a breath — and begins.`,
+      body: `It's the big day - after a few words of encouragement from Sophie and his teacher, Jon goes "on stage" and sits down at the piano to perform his song.
+
+SHINE (Up Until the Outro)
+
+Jon finishes his performance to a round of applause, and many of his family and friends join him on stage for the outro. Before the final chorus, he hugs his family and friends and talks to his two kids. The ensemble sings the final chorus. For the outro, after his solo, we see Jon out of breath and sit down, facing the audience, surrounded by his family and friends. The ensemble sings the final lines, holding a long note before the scene cuts to black.`,
     } satisfies SceneSection,
 
     {
@@ -1208,11 +1270,13 @@ I'm gonna shine through it all. [x4]`,
       type: "scene",
       act: 2,
       title: "A Memory",
-      body: `After intermission: only a piano on stage. Sophie walks out. She sees it and stops — light narrows around her and the piano as Jon (a memory) walks out and sits down to play.
+      body: `After intermission, we see only a piano on stage as Sophie walks out. We see her falter as the piano in the room grabs her attention - lighting focuses on Sophie and the piano as Jon (memory) walks out and sits down to start playing.
 
-Sophie drifts toward him. She sits beside him. She plays the final note as the song fades. The lights come up. Background chatter begins. The curtain rises: we are at the Jon Sun Memorial Show after-party. Sophie blinks back into the present.
+FOR YOU
 
-The MC thanks the crowd, explains the fundraiser, and thanks Sophie for hosting. Conversations resume around her.`,
+Sophie, who went over to join Jon at the piano during the song, plays the single, final note of the song. As it fades out, the lighting comes up and background chatter begins as the curtain raises. Sophie is snapped out of her memory as the audience sees the scene for the first time - showing that we are now at the memorial after-party.
+
+An MC explains how the show works as a fundraiser in honor of Jon, and that they raised a lot of money in his memory. She thanks Sophie for hosting the gathering afterwards as conversations begin in the background again.`,
     } satisfies SceneSection,
 
     {
@@ -1281,7 +1345,11 @@ Because I wrote it for you.`,
       type: "scene",
       act: 2,
       title: "Teachable Moments",
-      body: `The focus shifts to Jon's piano teacher, congratulating one of his students on a great performance. Someone introduces him to a potential new student. He laughs — learning is as easy as "A-B-C." Then, unprompted, a memory: Jon at the piano, asking why this is how he wanted to spend his energy.`,
+      body: `The focus shifts to Jon's teacher, congratulating one of his students on a great performance. Another potential student is introduced to him, and he jokes that learning is as easy as "A-B-C". The background stops again.
+
+TEACHER SONG (focus of this one is a conversation between Jon and the teacher, where the teacher asks him why this is how he wants to spend his energy - building on the "Bucket List" song in Act I. The main takeaway is that it's about being yourself, and leaving something behind. Experiences are priceless).
+
+Once again, we return to focus and the background conversations resume. The last part of the conversation is around why he still teaches - to help others have these experiences.`,
     } satisfies SceneSection,
 
     {
@@ -1299,7 +1367,11 @@ Because I wrote it for you.`,
       type: "scene",
       act: 2,
       title: "Old Photos",
-      body: `Jon's friends have gathered near a wall of old photos. They laugh at a few of them — Jon at some age when none of them were quite themselves yet. Then someone says it out loud: they can't believe it's been almost a year. They still think about him all the time.`,
+      body: `Focus shifts to Jon's friends, who are gathering around some old pictures of Jon that are hanging on the wall. They are laughing at the old pictures, and express their disbelief that it's already been almost a year since the performance, and how they still think about Jon day-to-day.
+
+BLUE SKIES (to be re-written)
+
+They end the song, of course, with a toast, and then disperse to go mingle a bit more as the focus shifts back to the general crowd. This is the first true end scene of Act II.`,
     } satisfies SceneSection,
 
     {
@@ -1317,9 +1389,13 @@ Because I wrote it for you.`,
       type: "scene",
       act: 2,
       title: "The Kids' Room",
-      body: `Sophie slips away from the party to check on the kids, who have retreated to their room. They're on the floor, reading one of the books Jon used to read to them at bedtime. They say they miss him. Sophie says she does too — he was always the best at telling stories.
+      body: `We return to Sophie, who is checking on her kids, who have decided to leave the main party area and are hanging out in their room. They are laying on the floor, reading one of their books that Jon would read to them before bed. They say how they miss their dad, and Sophie agrees that he was always the best at telling stories. The lights change to indicate we are entering a memory as Jon enters.
 
-The lights shift. Jon walks in. It's a memory: a hard day — the kids' grandmother has just passed away. Jon sits between them on the floor.`,
+The kids have had a tough day - their grandma has passed away.
+
+FLY (REPRISE) Re-written to be framed as their grandma watching them as they grow up and do great things - "always in their hearts".
+
+The scene ends with Jon kissing both kids on the head, and then walking out of the room. The lights return to normal as the kids go over and sit on each side of Sophie. After a shared moment, she asks if they want to go back downstairs. They agree, and exit.`,
     } satisfies SceneSection,
 
     {
@@ -1337,9 +1413,13 @@ The lights shift. Jon walks in. It's a memory: a hard day — the kids' grandmot
       type: "scene",
       act: 2,
       title: "A Last Conversation",
-      body: `Back in the main room. The party is starting to wind down. Sophie gathers everyone's attention to formally thank them for coming. She begins to speak — gratitude, reflection, the year that's passed. Mid-sentence, she catches. The crowd freezes. The lights shift.
+      body: `Back in the main room, conversation is still buzzing as the party starts to wind down. Sophie gathers everyone's attention to formally thank them for coming - as she expresses gratitude, and reflects on the past year to set up the annual show, she catches again. The crowd freezes, and lights shift into another memory.
 
-A memory: the night Jon proposed. She was so surprised she sprang up from where they were sitting and ran down the beach, and he had to chase her.`,
+Sophie is reminded of the day that Jon proposed to her. She begins singing alone, but Jon joins after the first chorus.
+
+HOME (Message of this song is about the journey - they promised that they would get through everything together (a different angle to LIE in the first act), and excitement for the future. The end of the song returns to Sophie alone, stating that "I'd choose to do it all again with you") - the completion of Sophie's arc, the sentiment that even knowing what would happen, she would still go back and do it again).
+
+As the song ends, we return the focus to the present and the crowd, and Sophie wraps up the speech.`,
     } satisfies SceneSection,
 
     {
@@ -1451,11 +1531,13 @@ I'd choose to do it all again with you.`,
       type: "scene",
       act: 2,
       title: "Epilogue",
-      body: `The guests leave. Sophie and the kids are alone in the house. The kids want to play "The Floor is Lava" — a game we've seen them play with Jon in Act I. They start laughing, jumping from cushion to cushion, and the music begins.
+      body: `The party departs, and we are left with Sophie and the kids by themselves, back in the house. The kids ask if they can play "The Floor is Lava", something we have seen them play with Jon in Act I. As they start playing and laughing, the music starts.
 
-Time accelerates: events, seasons, years. The kids play in school shows. Sophie has dinners with friends. The moments pile up. Eventually: a crowd, a graduation robe, a young man at a podium.
+EPILOGUE
 
-The speech he gives is the same monologue that opened the show — we understand now that it was Jon's son all along, reflecting on what his father taught him. The speech ends. The music swells one last time. Family and friends gather for a photo. Jon steps into the frame. They strike a pose. The music cuts. Lights out.`,
+We see time start to speed up, and various events happening with the family and friends - kids playing in events, dinners between Sophie and friends, eventually leading to a crowd and Jon's son in a graduation robe. The music softens as we see his son giving a speech - the speech ends with the same opening monologue, bringing the show full-circle to show that it was Jon's son speaking at the very beginning, reflecting on lessons learned from his dad.
+
+The speech ends, and music swells one final time as the family and friends gather to take a picture to celebrate graduation. We see Jon sneak into the photo as well, and they strike the final pose as the music cuts, and lights go out.`,
     } satisfies SceneSection,
 
     {
