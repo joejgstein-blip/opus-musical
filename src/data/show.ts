@@ -54,7 +54,7 @@ export const show = {
       type: "song",
       act: 1,
       title: "Prologue",
-      soundcloudUrl: albumTrack(0),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/01_prologue_original-1/s-RABCx8DqW7D?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=c297716de7074d2387f1ae6a977210a9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: null,
       lyricsWip: false,
     } satisfies SongSection,
@@ -84,7 +84,7 @@ End Scene as the music ends.`,
       type: "song",
       act: 1,
       title: "Hold the Line",
-      soundcloudUrl: albumTrack(1),
+      soundcloudUrl: "https://on.soundcloud.com/63aYa32Yb5uW4mL1j2",
       lyrics: `[Verse 1]
 
 Who am I?
@@ -211,7 +211,7 @@ As the song progresses, the kids are excited during verse 2 and out of bed. Befo
       type: "song",
       act: 1,
       title: "Fly",
-      soundcloudUrl: albumTrack(2),
+      soundcloudUrl: "https://on.soundcloud.com/jBMooSHQQO33LVv22r",
       lyrics: `[Verse 1]
 
 Take a breath,
