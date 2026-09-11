@@ -21,7 +21,10 @@ function buildEmbedUrl(url: string) {
 
 function isSongCue(p: string): boolean {
   const t = p.trim();
-  return t.length > 1 && t === t.toUpperCase() && /[A-Z]{2,}/.test(t) && t.length < 100;
+  if (t.length < 2 || t.length > 120) return false;
+  // Strip any trailing parenthetical like "(First Verse and Chorus)" before checking case
+  const withoutParen = t.replace(/\s*\([^)]*\)\s*$/, "").trim();
+  return withoutParen.length > 1 && withoutParen === withoutParen.toUpperCase() && /[A-Z]{2,}/.test(withoutParen);
 }
 
 function renderParagraph(text: string): React.ReactNode[] {

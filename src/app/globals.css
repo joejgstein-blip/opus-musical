@@ -412,21 +412,27 @@ em {
 
 .scene-song-hint {
   font-family: "Lato", sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  color: var(--gold-dim);
-  margin-left: 0.25rem;
-  font-style: italic;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-left: 0.5rem;
   flex-shrink: 0;
+  opacity: 0.75;
 }
 
 .scene-song-cue {
   font-family: "Lato", sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold-dim);
-  margin: 1.25rem 0;
+  color: var(--gold);
+  margin: 1.5rem 0;
+  padding: 0.6rem 0.75rem;
+  border-left: 2px solid var(--gold-dim);
+  background: var(--gold-faint);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 /* ── Embedded Song (inside a scene block) ── */
