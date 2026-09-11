@@ -153,27 +153,35 @@ em {
   border-bottom: 1px solid var(--border);
 }
 
-.toc-acts {
+.toc-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
 
 @media (max-width: 600px) {
-  .toc-acts {
+  .toc-two-col {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
+}
+
+.toc-col > .section-label {
+  margin-bottom: 1.5rem;
+}
+
+.toc-act-group {
+  margin-bottom: 1.5rem;
 }
 
 .toc-act-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   color: var(--text);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -185,7 +193,7 @@ em {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
-  padding: 0.3rem 0;
+  padding: 0.25rem 0;
   border-bottom: 1px solid rgba(200, 169, 110, 0.06);
 }
 
@@ -195,10 +203,18 @@ em {
 
 .toc-number {
   font-family: "Lato", sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--gold-dim);
   letter-spacing: 0.08em;
-  min-width: 1.5rem;
+  min-width: 1.75rem;
+  flex-shrink: 0;
+}
+
+.toc-song-icon {
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  color: var(--gold-dim);
+  min-width: 1.75rem;
   flex-shrink: 0;
 }
 
@@ -213,14 +229,6 @@ em {
 
 .toc-link:hover {
   color: var(--gold);
-}
-
-.toc-song-badge {
-  font-family: "Lato", sans-serif;
-  font-size: 0.7rem;
-  color: var(--gold-dim);
-  margin-left: auto;
-  flex-shrink: 0;
 }
 
 /* ── Act Header ── */
@@ -280,22 +288,54 @@ em {
   text-align: center;
 }
 
-/* ── Scene Block ── */
+/* ── Shared collapse chrome ── */
 
 .section-wrapper {
   margin-bottom: 1rem;
 }
 
+.collapse-chevron {
+  font-size: 1.1rem;
+  color: var(--gold-dim);
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  display: inline-block;
+  opacity: 0.6;
+  padding-left: 0.75rem;
+}
+
+.collapse-chevron.open {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+/* ── Scene Block ── */
+
 .scene-block {
-  padding: 2.5rem 0;
   border-bottom: 1px solid var(--border);
 }
 
-.scene-header {
+.scene-title-heading {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.scene-toggle-btn {
   display: flex;
   align-items: baseline;
   gap: 1rem;
-  margin-bottom: 1.25rem;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.75rem 0;
+  text-align: left;
+}
+
+.scene-toggle-btn:hover .scene-title {
+  color: var(--gold);
 }
 
 .scene-number {
@@ -313,12 +353,23 @@ em {
   font-weight: 400;
   letter-spacing: 0.04em;
   color: var(--text);
+  transition: color 0.2s ease;
 }
 
 .scene-body {
   color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.8;
+  padding-bottom: 2rem;
+}
+
+.scene-song-cue {
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin: 1.25rem 0;
 }
 
 /* ── Song Block ── */
@@ -327,9 +378,9 @@ em {
   background: var(--bg-song);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2.5rem 2rem 2rem;
   margin: 2rem 0;
   position: relative;
+  overflow: hidden;
 }
 
 .song-block::before {
@@ -344,9 +395,41 @@ em {
   opacity: 0.6;
 }
 
-.song-header {
+.song-title-heading {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.song-toggle-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2rem 2rem 1.75rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  position: relative;
+  transition: background 0.15s ease;
+}
+
+.song-toggle-btn:hover {
+  background: rgba(200, 169, 110, 0.04);
+}
+
+.song-toggle-btn .collapse-chevron {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.song-toggle-btn .collapse-chevron.open {
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .song-eyebrow {
@@ -366,6 +449,7 @@ em {
   font-style: italic;
   letter-spacing: 0.05em;
   color: var(--text);
+  display: block;
 }
 
 .song-wip-badge {
@@ -381,8 +465,12 @@ em {
   margin-top: 0.75rem;
 }
 
+.song-body {
+  padding: 0.25rem 2rem 2rem;
+}
+
 .soundcloud-embed {
-  margin: 1.5rem 0 0;
+  margin: 1.25rem 0 0;
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -399,7 +487,7 @@ em {
   border-radius: var(--radius);
   padding: 1.5rem;
   text-align: center;
-  margin: 1.5rem 0 0;
+  margin: 1.25rem 0 0;
   color: var(--text-dim);
   font-family: "Lato", sans-serif;
   font-size: 0.8rem;
@@ -407,25 +495,31 @@ em {
   text-transform: uppercase;
 }
 
+/* ── Lyrics Toggle (above the player) ── */
+
 .lyrics-toggle {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
   background: none;
-  border: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
   cursor: pointer;
-  padding: 0;
+  padding: 0.75rem 1.5rem;
   font-family: "Lato", sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
-  transition: opacity 0.2s;
+  transition: all 0.2s ease;
+  margin-bottom: 0;
 }
 
 .lyrics-toggle:hover {
-  opacity: 0.7;
+  background: var(--gold-faint);
+  border-color: var(--gold);
 }
 
 .lyrics-toggle-icon {
@@ -439,9 +533,12 @@ em {
 }
 
 .lyrics-panel {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  background: rgba(0,0,0,0.15);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 .lyrics-text {
@@ -725,6 +822,35 @@ em {
   font-size: 0.85rem;
   color: var(--text-dim);
   font-style: italic;
+}
+
+/* ── Next Section Button ── */
+
+.next-section-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(200, 169, 110, 0.08);
+}
+
+.next-section-btn {
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--gold);
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.next-section-btn:hover {
+  background: var(--gold-faint);
+  border-color: var(--gold);
 }
 
 /* ── Animations ── */

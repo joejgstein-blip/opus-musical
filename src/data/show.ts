@@ -993,7 +993,7 @@ The scene ends with Jon leaving after dinner to go to another lesson.`,
 
 In his low point, Jon expresses how he doesn't know how he can do it, and keep going. It's the breaking of the rose colored glasses that he has been wearing this whole time. reassures him how he doesn't have to fight by himself - he can let other people fight for him sometimes.
 
-LOW POINT TBD (??)
+SUPERMAN
 
 Jon and Sophie end the song hugging - they thank the teacher for the help and exit as the scene ends.`,
     } satisfies SceneSection,

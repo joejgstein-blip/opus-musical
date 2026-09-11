@@ -7,24 +7,37 @@ import SongBlock from "@/components/SongBlock";
 import type { SceneSection, SongSection } from "@/data/show";
 
 export default function Home() {
-  const act1 = show.sections.filter((s) => s.act === 1);
-  const act2 = show.sections.filter((s) => s.act === 2);
+  const allSections = show.sections;
+  const act1 = allSections.filter((s) => s.act === 1);
+  const act2 = allSections.filter((s) => s.act === 2);
   const act2Info = show.acts.find((a) => a.number === 2)!;
 
-  let globalIndex = 0;
+  const nextIdMap = new Map(
+    allSections.map((s, i) => [s.id, allSections[i + 1]?.id])
+  );
 
-  function renderSection(section: (typeof show.sections)[number]) {
-    globalIndex++;
+  let sceneNum = 0;
+
+  function renderSection(section: (typeof allSections)[number]) {
+    const nextSectionId = nextIdMap.get(section.id);
     if (section.type === "scene") {
+      sceneNum++;
       return (
         <SceneBlock
           key={section.id}
           scene={section as SceneSection}
-          index={globalIndex}
+          index={sceneNum}
+          nextSectionId={nextSectionId}
         />
       );
     }
-    return <SongBlock key={section.id} song={section as SongSection} />;
+    return (
+      <SongBlock
+        key={section.id}
+        song={section as SongSection}
+        nextSectionId={nextSectionId}
+      />
+    );
   }
 
   return (
