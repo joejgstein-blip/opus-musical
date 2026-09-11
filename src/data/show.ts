@@ -323,7 +323,7 @@ The scene ends with Jon packing up his bag and heading home.`,
       type: "song",
       act: 1,
       title: "Bucket List",
-      soundcloudUrl: albumTrack(3),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/04_bucket_list-3/s-83ifpE0EHqg?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=082b57cf9a9941a8aba0a125cc2cdd18&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Verse 1]
 *(Coworkers)*
 
@@ -459,7 +459,7 @@ The song pulls in additional contributions from other students at the school, en
       type: "song",
       act: 1,
       title: "ABC",
-      soundcloudUrl: albumTrack(4),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/05_abc-5/s-yPeE4ogFSjr?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=b17b623ec1f742e6931bbd620f8cb2ad&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Verse 1]
 *(Teacher)*
 
@@ -572,7 +572,7 @@ The scene ends with them together, laughing.`,
       type: "song",
       act: 1,
       title: "In the City",
-      soundcloudUrl: albumTrack(5),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/06_in_the_city-4/s-tAzvCm0IkOM?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=af4fc47145ea48409ed0e4636b33aae5&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Verse 1]
 
 It was long ago,
@@ -689,7 +689,7 @@ The scene ends with Jon singing the final line, sitting back down at the table w
       type: "song",
       act: 1,
       title: "Luckiest Man",
-      soundcloudUrl: albumTrack(6),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/07_luckiest_man-6/s-HcGvEgGp24a?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=d0f888fc19ce4116963b71a15f5eb94d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Verse]
 
 Happy birthday to me,
@@ -775,7 +775,7 @@ The scene ends with Sophie, sitting back down at Jon's place setting.`,
       type: "song",
       act: 1,
       title: "Lie",
-      soundcloudUrl: albumTrack(7),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/04_lie-4/s-c0WTvNKFFSC?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=933bdc1263604d0cb4f5ee25f0169104&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Verse]
 *(Sophie)*
 
@@ -895,7 +895,7 @@ As the song ends, the friends share a few more good-byes and then exit, leaving 
       type: "song",
       act: 1,
       title: "Winding Road",
-      soundcloudUrl: albumTrack(8),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/06_winding_road-6/s-mtWJhLn8fXa?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=9c506350dbb949e4ab0403d33d719d36&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Verse 1]
 
 *(Mike)*
@@ -999,7 +999,7 @@ Jon and Sophie end the song hugging - they thank the teacher for the help and ex
       type: "song",
       act: 1,
       title: "Superman",
-      soundcloudUrl: albumTrack(9),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/010_superman-5/s-MVrXQbsRa5P?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=02fef5639d954b50a7989315fda7568c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `*(Sophie has been telling Jon he needs to rest. He keeps brushing it off. She pushes harder, more frustrated, until—)*
 
 *Jon snaps: "I KNOW what's happening to me!"*
@@ -1123,7 +1123,7 @@ Jon finishes his performance to a round of applause, and many of his family and 
       type: "song",
       act: 1,
       title: "Shine",
-      soundcloudUrl: albumTrack(11),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/07_shine-7/s-mwfSZm41hmV?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=cf6aa0c9293b4ce1817e7d9e8a5b6cb8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Intro]
 
 Well, it might be the end.
@@ -1280,7 +1280,7 @@ An MC explains how the show works as a fundraiser in honor of Jon, and that they
       type: "song",
       act: 2,
       title: "For You",
-      soundcloudUrl: albumTrack(12),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/012_for_you-1/s-sXG074dS888?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=49e782e6f7d04e8bb5a94f60d4ee0a65&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `*(Jon, alone — not yet aware Sophie is listening)*
 
 Feels like the world is getting colder,
@@ -1423,7 +1423,7 @@ As the song ends, we return the focus to the present and the crowd, and Sophie w
       type: "song",
       act: 2,
       title: "Home",
-      soundcloudUrl: albumTrack(14),
+      soundcloudUrl: "https://soundcloud.com/user-885999480/013_home-2/s-9gif1nV8nPH?in=user-885999480/sets/musical_demo/s-YmPI8omDIvl&si=4cc9659edcf740b6a518d64fe69f2621&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
       lyrics: `[Verse 1]
 *(Sophie's point of view)*
 
