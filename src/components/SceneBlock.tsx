@@ -109,7 +109,7 @@ export default function SceneBlock({ scene, song, index, nextSectionId }: Props)
                   <div className="soundcloud-embed">
                     <iframe
                       width="100%"
-                      height="120"
+                      height="166"
                       allow="autoplay"
                       src={buildEmbedUrl(song.soundcloudUrl)}
                       title={`${song.title} — audio player`}

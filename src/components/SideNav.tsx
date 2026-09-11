@@ -7,11 +7,11 @@ const ALBUM_URL =
 
 export default function SideNav() {
   const [activeId, setActiveId] = useState<string>("");
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const songs = show.sections.filter((s) => s.type === "song");
   const scenes = show.sections.filter((s) => s.type === "scene");
 
-  // Map each song to its parent scene (the scene immediately before it)
   const songToScene = new Map<string, string>();
   const sceneToSong = new Map<string, string>();
   const all = show.sections;
@@ -25,7 +25,6 @@ export default function SideNav() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // Use the last intersecting entry (lowest on page = most "current")
         const visible = entries.filter((e) => e.isIntersecting);
         if (visible.length > 0) {
           setActiveId(visible[visible.length - 1].target.id);
@@ -33,17 +32,23 @@ export default function SideNav() {
       },
       { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
     );
-
     show.sections.forEach((s) => {
       const el = document.getElementById(s.id);
       if (el) observer.observe(el);
     });
-
     return () => observer.disconnect();
   }, []);
 
+  // Close mobile nav on escape key
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
   function navigateTo(id: string) {
-    // For songs embedded in scenes, scroll to the parent scene first
     const sceneId = songToScene.get(id);
     const scrollTarget = sceneId ?? id;
     const el = document.getElementById(scrollTarget);
@@ -53,6 +58,7 @@ export default function SideNav() {
         window.dispatchEvent(new CustomEvent("opus:open-section", { detail: id }));
       }, 450);
     }
+    setMobileOpen(false);
   }
 
   function isSongActive(songId: string) {
@@ -67,16 +73,11 @@ export default function SideNav() {
     return !!linked && activeId === linked;
   }
 
-  return (
-    <nav className="side-nav" aria-label="Section navigation">
+  const navContent = (
+    <>
       <div className="side-nav-group">
         <span className="side-nav-heading">Songs</span>
-        <a
-          href={ALBUM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="side-nav-album-link"
-        >
+        <a href={ALBUM_URL} target="_blank" rel="noopener noreferrer" className="side-nav-album-link">
           ♪ Full album ↗
         </a>
         <div className="side-nav-track">
@@ -113,6 +114,32 @@ export default function SideNav() {
           ))}
         </div>
       </div>
-    </nav>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile toggle button */}
+      <button
+        className="side-nav-toggle"
+        onClick={() => setMobileOpen(true)}
+        aria-label="Open navigation"
+      >
+        ♪
+      </button>
+
+      {/* Mobile backdrop */}
+      {mobileOpen && (
+        <div className="side-nav-backdrop" onClick={() => setMobileOpen(false)} />
+      )}
+
+      {/* Desktop sidebar / mobile slide-in panel */}
+      <nav className={`side-nav ${mobileOpen ? "mobile-open" : ""}`} aria-label="Section navigation">
+        <button className="side-nav-close" onClick={() => setMobileOpen(false)} aria-label="Close navigation">
+          ×
+        </button>
+        {navContent}
+      </nav>
+    </>
   );
 }
