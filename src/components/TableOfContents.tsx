@@ -16,8 +16,8 @@ function navigate(id: string) {
 }
 
 export default function TableOfContents() {
-  const [songsOpen, setSongsOpen] = useState(true);
-  const [scenesOpen, setScenesOpen] = useState(true);
+  const [songsOpen, setSongsOpen] = useState(false);
+  const [scenesOpen, setScenesOpen] = useState(false);
 
   const songs = show.sections.filter((s) => s.type === "song");
   const scenes = show.sections.filter((s) => s.type === "scene");

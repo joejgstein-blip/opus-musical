@@ -29,7 +29,7 @@ function albumTrack(index: number) {
 
 export const show = {
   title: "Opus",
-  synopsis: `[Synopsis coming soon]`,
+  synopsis: `Inspired by a true story. Jon is diagnosed with a terminal illness and decides to spend the last year of his life learning to play piano. Act I follows his journey navigating family, community, and illness, culminating in his performance of an original song.\n\nAct II follows those closest to him as they come together to celebrate.`,
   acts: [
     { number: 1, title: "Act I" },
     {

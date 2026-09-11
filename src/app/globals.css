@@ -117,6 +117,29 @@ em {
   opacity: 0.5;
 }
 
+.start-show-btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+  padding: 0.85rem 2.5rem;
+  background: none;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  color: var(--gold);
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.start-show-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+  box-shadow: 0 0 24px rgba(200, 169, 110, 0.3);
+}
+
 /* ── Synopsis ── */
 
 .synopsis {
@@ -143,6 +166,7 @@ em {
   font-style: italic;
   line-height: 1.8;
   color: var(--text-muted);
+  margin-bottom: 1rem;
 }
 
 /* ── Table of Contents ── */
