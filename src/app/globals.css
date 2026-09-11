@@ -785,7 +785,7 @@ em {
   display: none;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 960px) {
   .side-nav { display: none; }
 }
 

@@ -1,7 +1,6 @@
 import { show } from "@/data/show";
 import Hero from "@/components/Hero";
 import Synopsis from "@/components/Synopsis";
-import TableOfContents from "@/components/TableOfContents";
 import SceneBlock from "@/components/SceneBlock";
 import SongBlock from "@/components/SongBlock";
 import SideNav from "@/components/SideNav";
@@ -89,7 +88,6 @@ export default function Home() {
       <main className="main-content">
         <Hero />
         <Synopsis />
-        <TableOfContents />
 
         <div className="act-header">
           <span className="act-number">Act One</span>
