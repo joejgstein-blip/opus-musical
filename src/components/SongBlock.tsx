@@ -10,7 +10,10 @@ interface Props {
 }
 
 function buildEmbedUrl(url: string) {
-  const encoded = encodeURIComponent(url);
+  // Private SC tracks share as /s-TOKEN paths; the player needs ?secret_token=s-TOKEN
+  const m = url.match(/^(https:\/\/soundcloud\.com\/[^?]+?)\/s-([A-Za-z0-9]+)/);
+  const trackUrl = m ? `${m[1]}?secret_token=s-${m[2]}` : url;
+  const encoded = encodeURIComponent(trackUrl);
   return `https://w.soundcloud.com/player/?url=${encoded}&color=%23c8a96e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`;
 }
 

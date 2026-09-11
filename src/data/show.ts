@@ -84,7 +84,7 @@ End Scene as the music ends.`,
       type: "song",
       act: 1,
       title: "Hold the Line",
-      soundcloudUrl: "https://on.soundcloud.com/63aYa32Yb5uW4mL1j2",
+      soundcloudUrl: "https://soundcloud.com/user-885999480/02_hold_the_line-2/s-PqpjETGHdgw",
       lyrics: `[Verse 1]
 
 Who am I?
@@ -211,7 +211,7 @@ As the song progresses, the kids are excited during verse 2 and out of bed. Befo
       type: "song",
       act: 1,
       title: "Fly",
-      soundcloudUrl: "https://on.soundcloud.com/jBMooSHQQO33LVv22r",
+      soundcloudUrl: "https://soundcloud.com/user-885999480/03_fly-3/s-IGq1piV40Hh",
       lyrics: `[Verse 1]
 
 Take a breath,
